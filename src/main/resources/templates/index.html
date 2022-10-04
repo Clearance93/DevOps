@@ -1,0 +1,944 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title>W3.CSS Template</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato">
+<link rel="stylesheet" href="css/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=PT+Sans:ital@1&display=swap" rel="stylesheet">
+    <!-- <link href="/your-path-to-your-compiled-css-including-fontawesome/file.css" rel="stylesheet"> -->
+    <link rel="stylesheet" href="https://use.fontawesome.com/63fcf921f5.css">
+    <!-- CSS only -->
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css"
+ rel="stylesheet" integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi"
+ crossorigin="anonymous">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<style>
+body {font-family: "Lato", sans-serif}
+.mySlides {display: none}
+
+    .header{
+        min-width: 100vh;
+        width: 100%;
+        background-image: linear-gradient(rgba(13, 202, 240, 0.5), rgba(13, 202, 240, 0.5)), url("https://cdn.hswstatic.com/gif/becoming-doctor.jpg");
+        background-position: center;
+        background-size: cover;
+        position: relative;
+        margin-top: -1.3%;
+        height: 100vh;
+    }
+   
+    .home{
+        padding: 20%;
+    }
+    .home h1{
+        margin-left: 3%;
+        font-weight: 700;
+        font-size: 3.8em;
+        font-family:'Times New Roman', Times, serif;
+    }
+    .mb{
+        font-weight: 500;
+        font-size: 1.1em;
+        color: orangered;
+        margin-left: 20px;
+    }
+    button{
+        margin-left: 20px;
+    }
+    .first{
+        text-align: center;
+        margin: 5px;
+        font-family:'Times New Roman', Times, serif;
+        text-shadow: -12px -15px 12px maroon;
+    }
+    u{
+        box-shadow: 10px 12px 10px blue;
+    }
+    .section-p1{
+        padding: 40px 80px;
+    }
+    .row{
+        margin-top: 10px;
+    }
+    #feature{
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        flex-wrap: wrap;
+    }
+    #feature .fe-box{
+        width: 180px;
+        text-align: center;
+        padding: 25px 15px;
+        box-shadow: 20px 20px 37px #111;
+        border: 1px solid #cce7d0;
+        border-radius: 4px;
+        margin: 25px 90px;
+    }
+    .img{
+        width: 145px;
+        height: 100px;
+    }
+    #feature .fe-box:hover{
+        box-shadow: -15px -15px 25px maroon;
+        background: rgba(226, 0, 0, 0.7);
+        animation: shake 0.7s;
+        animation-iteration-count: infinite;
+    }
+    #feature .fe-box .img{
+        width: 145px;
+        height: 100px;
+    }
+    #feature .fe-box h5{
+        display: inline-block;
+        line-height: 1;
+        padding: 10px 9px 7px 9px;
+        border-radius: 6px;
+        color: maroon;
+        background-color: orangered;
+    }
+    h5{
+        cursor: pointer;
+    }
+    .Hospitals{
+        width: 80%;
+        margin: auto;
+        text-align: center;
+        padding-top: 50px;
+    }
+    .hos{
+        flex-basis: 32%;
+        border-radius: 10px;
+        margin-bottom: 30px;
+        position: relative;
+        overflow: hidden;
+    }
+    .hos img{
+        width: 100%;
+    }
+    .layer{
+        background: transparent;
+        height: 100%;
+        width: 100%;
+        position: absolute;
+        top: 0;
+        left: 0;
+        transition: 0.7s
+    }
+    .layer:hover{
+         background: rgba(226, 0, 0, 0.7);
+    }
+    h3{
+        color: #fff;
+    }
+    .layer h3{
+        width: 100%;
+        font-weight: 500;
+        color: #fff;
+        font-size: 26px;
+        bottom: 0;
+        left: 50%;
+        transform: translateX(-50%);
+        position: absolute;
+        opacity: 0;
+        transition: 0.5s;
+    }
+    .layer:hover h3{
+        bottom: 49%;
+        opacity: 1;
+    }
+    .facilities{
+        width: 80%;
+        margin: auto;
+        text-align: center;
+        padding-top: 100px
+    }
+    .facility-col{
+        flex-basis: 31%;
+        border-radius: 10px;
+        margin-bottom: 5%;
+        border-radius: 10px;
+    }
+    .facility-col img{
+      height: 250px;
+      width: 350px;
+      border-radius: 10px;
+    }
+    .grids{
+        display: flex;
+    }
+    .cta{
+        margin: 50px auto;
+        width: 80%;
+        background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0,0,0,0.7)), url("https://ichef.bbci.co.uk/news/976/cpsprodpb/15573/production/_100611478_paramedicsgetty.jpg");
+        background-position: center;
+        background-size: cover;
+        border-radius: 10px;
+        text-align: center;
+        padding: 100px 0;
+    }
+    .cta h1{
+        color: #fff;
+        margin-bottom: 40px;
+        padding: 0;
+    }
+    
+    html {
+    font-size: 14px;
+}
+
+
+@media (min-width: 768px) {
+  html {
+    font-size: 16px;
+  }
+}
+
+@keyframes example {
+    from {
+        background-color: red;
+        color: #111;
+    }
+
+    to {
+        background-color: yellow;
+        color: green;
+    }
+    to {
+        background-color: green;
+        color: yellow;
+    }
+    to {
+        background-color: blue;
+        color: #fff;
+    }
+}
+
+@keyframes example {
+    0% {
+        background-color: red;
+        left: 0px;
+        top: 0px;
+        color: #111;
+        box-shadow: -25px -25px 30px blue
+    }
+
+    25% {
+        background-color: yellow;
+        left: 200px;
+        top: 0px;
+        color: green;
+        box-shadow: 25px 25px 30px orangered;
+    }
+
+    50% {
+        background-color: blue;
+        left: 200px;
+        top: 200px;
+        color: yellow;
+        box-shadow: -25px -25px 30px red;
+    }
+
+    75% {
+        background-color: green;
+        left: 0px;
+        top: 200px;
+        color: #fff;
+        box-shadow: 25px 25px 30px purple;
+    }
+
+    100% {
+        background-color: red;
+        left: 0px;
+        top: 0px;
+    }
+}
+
+html {
+  position: relative;
+  min-height: 100%;
+}
+
+body {
+  margin-bottom: 60px;
+}
+
+.flow{
+    margin-bottom: 36px;
+}
+
+
+@media (min-width: 1025px) {
+    .h-custom {
+        height: 100vh !important;
+    }
+}
+
+.card-registration .select-input.form-control[readonly]:not([disabled]) {
+    font-size: 1rem;
+    line-height: 2.15;
+    padding-left: .75em;
+    padding-right: .75em;
+}
+
+.card-registration .select-arrow {
+    top: 13px;
+}
+
+.gradient-custom-2 {
+    /* fallback for old browsers */
+    background: #a1c4fd;
+    /* Chrome 10-25, Safari 5.1-6 */
+    background: -webkit-linear-gradient(to right, rgba(161, 196, 253, 1), rgba(194, 233, 251, 1));
+    /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    background: linear-gradient(to right, rgba(161, 196, 253, 1), rgba(194, 233, 251, 1))
+}
+
+.bg-indigo {
+    background-color: #4835d4;
+}
+
+@media (min-width: 1000px) {
+    .card-registration-2 .bg-indigo {
+        border-top-right-radius: 15px;
+        border-bottom-right-radius: 15px;
+    }
+}
+
+@media (max-width: 1000px) {
+    .card-registration-2 .bg-indigo {
+        border-bottom-left-radius: 15px;
+        border-bottom-right-radius: 15px;
+    }
+}
+
+.footer {
+    width: 100%;
+    text-align: center;
+    padding: 30px 0;
+    background-color: #111;
+    color: #fff;
+}
+
+    .footer h4 {
+        margin-bottom: 25px;
+        margin-top: 20px;
+        font-weight: 600;
+    }
+
+.icons .bi {
+    color: #f44336;
+    margin: 0 12px;
+    cursor: pointer;
+    padding: 18px 0;
+}
+
+icons .bi .i-balloon-heart-fill {
+    color: #f44336;
+}
+
+@keyframes shake{
+    0% {
+        transform: translate(1px, 1px) rotate(0deg);
+    }
+
+    10% {
+        transform: translate(-1px, -2px) rotate(-1deg);
+    }
+
+    20% {
+        transform: translate(-3px, 0px) rotate(1deg);
+    }
+
+    30% {
+        transform: translate(3px, 2px) rotate(0deg);
+    }
+
+    40% {
+        transform: translate(1px, -1px) rotate(1deg);
+    }
+
+    50% {
+        transform: translate(-1px, 2px) rotate(-1deg);
+    }
+
+    60% {
+        transform: translate(-3px, 1px) rotate(0deg);
+    }
+
+    70% {
+        transform: translate(3px, 1px) rotate(-1deg);
+    }
+
+    80% {
+        transform: translate(-1px, -1px) rotate(1deg);
+    }
+
+    90% {
+        transform: translate(1px, 2px) rotate(0deg);
+    }
+
+    100% {
+        transform: translate(1px, -2px) rotate(-1deg);
+    }
+}
+
+h1.site-title {
+    font-size: 145px;
+    line-height: 1em;
+    margin: 0 0 0.1em;
+    text-transform: uppercase;
+}
+
+    h1.site-title small {
+        font-size: 23px;
+        margin-top: 0;
+        display: block;
+        font-family: "Raleway";
+    }
+
+    h1.site-title a {
+        display: block;
+        width: 280px;
+        height: 80px;
+        /*text-align: right;*/
+        margin: 1px auto 0px;
+        text-indent: -9999px;
+        background: url(https://loomweb.co.za/wp-content/themes/starkers/img/loom-logo-2-mobile.png) 50% 3px no-repeat;
+    }
+
+header hr {
+    display: block;
+    position: absolute;
+    border-top: 2px solid #000;
+    z-index: -1;
+    left: 0px;
+    width: 100%;
+    margin: 0;
+}
+
+    header hr.right {
+        left: auto;
+        right: 0px;
+    }
+
+    header hr#thread1 {
+        top: 0.8em;
+        -webkit-animation: thread2 10s infinite;
+        -moz-animation: thread2 10s infinite;
+        -o-animation: thread2 10s infinite;
+        animation: thread2 10s infinite;
+    }
+
+    header hr#thread2 {
+        top: 1.8em;
+        /*right:15px;*/
+        -webkit-animation: thread2 8s infinite;
+        -moz-animation: thread2 8s infinite;
+        -o-animation: thread2 8s infinite;
+        animation: thread2 8s infinite;
+    }
+
+    header hr#thread3 {
+        top: 2.8em;
+        /* 	right:15px; */
+        border-color: #b7bf33;
+        -webkit-animation: thread2 6s infinite;
+        -moz-animation: thread2 6s infinite;
+        -o-animation: thread2 6s infinite;
+        animation: thread2 6s infinite;
+    }
+
+    header hr#thread4 {
+        top: 3.8em;
+        border-color: #b23836;
+        -webkit-animation: thread2 12s infinite;
+        -moz-animation: thread2 12s infinite;
+        -o-animation: thread2 12s infinite;
+        animation: thread2 12s infinite;
+    }
+
+    header hr#thread5 {
+        top: 4.8em;
+        border-color: #3953a4;
+        -webkit-animation: thread2 16s infinite;
+        -moz-animation: thread2 16s infinite;
+        -o-animation: thread2 16s infinite;
+        animation: thread2 16s infinite;
+    }
+
+    header hr#thread6 {
+        top: 5.8em;
+        -webkit-animation: thread2 6s infinite;
+        -moz-animation: thread2 6s infinite;
+        -o-animation: thread2 6s infinite;
+        animation: thread2 6s infinite;
+    }
+
+@media (min-width: 768px) {
+    header {
+        font-size: 18px;
+    }
+
+    h1.site-title a {
+        width: 416px;
+        height: 120px;
+        margin: 0px auto 0px;
+        text-indent: -9999px;
+        background: url(https://loomweb.co.za/wp-content/themes/starkers/img/loom-logo-2.png) 50% 5px no-repeat;
+    }
+
+    h1.site-title small {
+        font-size: 35px;
+    }
+
+    header hr {
+        border-width: 3px;
+    }
+}
+
+@media (min-width: 992px) {
+    header hr {
+    }
+}
+
+@media (min-width: 1200px) {
+    header hr {
+    }
+}
+
+@-webkit-keyframes thread2 {
+    0% {
+        width: 100%;
+    }
+
+    50% {
+        width: 100%;
+    }
+
+    80% {
+        width: 0px;
+    }
+
+    100% {
+        width: 100%;
+    }
+}
+
+@-moz-keyframes thread2 {
+    0% {
+        width: 100%;
+    }
+
+    50% {
+        width: 100%;
+    }
+
+    80% {
+        width: 0px;
+    }
+
+    100% {
+        width: 100%;
+    }
+}
+
+@-o-keyframes thread2 {
+    0% {
+        width: 100%;
+    }
+
+    50% {
+        width: 100%;
+    }
+
+    80% {
+        width: 0px;
+    }
+
+    100% {
+        width: 100%;
+    }
+}
+
+@keyframes thread2 {
+    0% {
+        width: 100%;
+    }
+
+    50% {
+        width: 100%;
+    }
+
+    80% {
+        width: 0px;
+    }
+
+    100% {
+        width: 100%;
+    }
+}
+
+header {
+    margin: 2em 0 1em;
+    font-size: 12.2px;
+    text-align: center;
+    position: relative;
+}
+
+.progress, .alert-success {
+    position: fixed;
+    height: 100px;
+    top: 50%;
+    left: 0%;
+    width: 90%;
+    margin-left: 5%;
+}
+
+/*.progress, alert-success {
+    position: fixed;
+    height: 100px;
+    top: 50%;
+    left: 0%;
+    width: 90%;
+    margin-left: 5%;
+}*/
+
+
+.overlay{
+    position: absolute;
+    display: none;
+    background-color: rgba(120, 120,120,0.5);
+    top: 0;
+    left: 0;
+    right: 0;
+}
+
+.popup{
+    position: fixed;
+    z-index: 99;
+    vertical-align: central;
+    display: none;
+    margin-left: 30%;
+    margin-bottom: 30%;
+}
+</style>
+</head>
+<body>
+
+<!-- Navbar -->
+<div class="w3-top">
+  <div class="w3-bar w3-black w3-card">
+    <a class="w3-bar-item w3-button w3-padding-large w3-hide-medium w3-hide-large w3-right" href="javascript:void(0)" onclick="myFunction()" title="Toggle Navigation Menu"><i class="fa fa-bars"></i></a>
+    <a href="#" class="w3-bar-item w3-button w3-padding-large">HOME</a>
+    <a href="#band" class="w3-bar-item w3-button w3-padding-large w3-hide-small">BAND</a>
+    <a href="#tour" class="w3-bar-item w3-button w3-padding-large w3-hide-small">TOUR</a>
+    <a href="#contact" class="w3-bar-item w3-button w3-padding-large w3-hide-small">CONTACT</a>
+    <div class="w3-dropdown-hover w3-hide-small">
+      <button class="w3-padding-large w3-button" title="More">MORE <i class="fa fa-caret-down"></i></button>     
+      <div class="w3-dropdown-content w3-bar-block w3-card-4">
+        <a href="#" class="w3-bar-item w3-button">Merchandise</a>
+        <a href="#" class="w3-bar-item w3-button">Extras</a>
+        <a href="#" class="w3-bar-item w3-button">Media</a>
+      </div>
+    </div>
+    <a href="javascript:void(0)" class="w3-padding-large w3-hover-red w3-hide-small w3-right"><i class="fa fa-search"></i></a>
+  </div>
+</div>
+
+<!-- Navbar on small screens (remove the onclick attribute if you want the navbar to always show on top of the content when clicking on the links) -->
+<div id="navDemo" class="w3-bar-block w3-black w3-hide w3-hide-large w3-hide-medium w3-top" style="margin-top:46px">
+  <a href="#band" class="w3-bar-item w3-button w3-padding-large" onclick="myFunction()">BAND</a>
+  <a href="#tour" class="w3-bar-item w3-button w3-padding-large" onclick="myFunction()">TOUR</a>
+  <a href="#contact" class="w3-bar-item w3-button w3-padding-large" onclick="myFunction()">CONTACT</a>
+  <a href="#" class="w3-bar-item w3-button w3-padding-large" onclick="myFunction()">MERCH</a>
+</div>
+
+<!-- Page content -->
+<div class="w3-content" style="max-width:2000px;margin-top:46px">
+
+  <section class="header">
+    <div class="home">
+          <h1 class="text-danger">Local Biggest Hospital</h1>
+            <p class="col-md-7 mb">Available 24/7 and we are just a call away incase of an emegency. We deliver the best service and care for our patient and make sure that our patient get the best treatment ever.</p>
+            <a asp-controller="" asp-action="" class="btn btn-outline-danger">learn More</a>
+    </div>
+</section>
+<h1 class="first"><i><u>L.H.M.S Roles</u></i></h1>
+<section id="feature" class="section-p1 container"> 
+       <div class="row">
+           <div class="col-md-3">
+               <div class="fe-box">
+                   <img src="https://www.thetimes.co.uk/imageserver/image/%2Fmethode%2Fsundaytimes%2Fprod%2Fweb%2Fbin%2F49faade0-8719-11ea-8a4a-4fb1a38ed7a5.jpg?crop=2667%2C1500%2C0%2C0" class="img" />
+                   <a asp-controller="paramedic" asp-action="Index"><h5>Paramedics</h5></a>
+               </div>
+           </div> 
+        <div class="col-md-3">
+            <div class="fe-box">
+                <img src="https://careersmart.org.uk/sites/default/files/2017-04/Hospital-porters.jpg" class="img" />
+        <a asp-controller="Porter" asp-action="Index"><h5>Porters</h5></a>
+            </div>
+        </div>
+        <div class="col-md-3">
+            <div class="fe-box">
+                <img src="https://dr-olivier-clinic.com/wp-content/uploads/2014/10/different-doctors.jpg" class="img" />
+        <a asp-controller="Doctors" asp-action="Index"><h5>Doctors</h5></a>
+            </div>
+        </div>
+         <div class="col-md-3">
+            <div class="fe-box">
+                <img src="https://img.nbc.com/sites/nbcunbc/files/images/2020/11/13/Nurses_S1-KeyArt-Lg-2048x1152.jpg" class="img" />
+        <a asp-controller="Nurse" asp-action="Index"><h5>Nurses</h5></a>
+            </div>
+        </div>
+         <div class="col-md-3">
+            <div class="fe-box">
+                <img src="https://media.istockphoto.com/photos/smiling-african-american-cleaner-holding-vacuum-cleaner-brush-near-picture-id1222545484?k=20&m=1222545484&s=612x612&w=0&h=n0_UB-vwvFyJAOIy2CGxuFmrzOcwz2ed0TuITy4cmZM=" class="img" />
+        <a asp-controller="Clearner" asp-action="Index"><h5>Clearners</h5></a>
+            </div>
+        </div>
+         <div class="col-md-3">
+            <div class="fe-box">
+                <img src="https://maxpeoplehr.com/wp-content/uploads/2018/02/iStock-522259169.jpg" class="img" />
+        <a asp-controller="HR" asp-action="Index"><h5>HR</h5></a>
+            </div>
+        </div>
+         <div class="col-md-3">
+            <div class="fe-box">
+                <img src="https://media.istockphoto.com/photos/blue-double-exposure-of-money-coins-stacking-with-bar-graph-for-and-picture-id1250581414?k=20&m=1250581414&s=612x612&w=0&h=HAL05aplFF-JL93ltg64siWfTwrrVyf4ldofZJSY-qo=" class="img" />
+        <a asp-controller="Finance" asp-action="Index"><h5>Finance</h5></a>
+            </div>
+        </div>
+         <div class="col-md-3">
+            <div class="fe-box">
+                <img src="https://thumbs.dreamstime.com/b/internet-information-technology-businessman-hand-showing-concept-75784736.jpg" class="img" />
+        <a asp-controller="IT" asp-action="Index"><h5>IT</h5></a>
+            </div>
+        </div>
+         <div class="col-md-3">
+            <div class="fe-box">
+                <img src="https://www.investopedia.com/thmb/3GMhevEeVcqlJrpCnpLl8gnebDk=/2644x1133/filters:fill(auto,1)/GettyImages-598255596-506f0abd74c64b5396d4733314b35de3.jpg" class="img" />
+        <a asp-controller="Manager" asp-action="Index"><h5>Management</h5></a>
+            </div>
+        </div>
+         <div class="col-md-3">
+            <div class="fe-box">
+                <img src="https://asiasociety.org/sites/default/files/styles/1200w/public/B/business-management-and-administration_accounting-training_flickr.jpg" class="img" />
+        <a asp-controller="Admin" asp-action="Index"><h5>Administration</h5></a>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="Hospitals">
+    <h1 class="first">Our hospitals</h1>
+    <p>Our hospital are national yet working with the top hospital national and internationa from medi-clinic to the top global hospitals</p>
+    <div class="row">
+        <div class="hos">
+            <img src="https://media.istockphoto.com/photos/building-with-large-h-sign-for-hospital-picture-id1130389312?k=20&m=1130389312&s=612x612&w=0&h=4edAr7WFKZfiENIVJlzC-qyUqV46GwCcDS-Kcr4aO_4=" />
+             <div class="layer">
+                <h3>Limpopo</h3>
+            </div>
+        </div>
+         <div class="hos">
+            <img src="https://images.squarespace-cdn.com/content/v1/53068e8be4b0d4022ddcacd3/1401381019349-KZ6RS10B7NS0HC79DG9P/Kaiser+Fontana+Hospital+1.jpg" />
+             <div class="layer">
+                <h3>Gauteng</h3>
+            </div>
+        </div>
+         <div class="hos">
+            <img src="https://i.pinimg.com/originals/a9/82/ba/a982bae0320f36be453efcae796afdab.jpg" />
+             <div class="layer">
+                <h3>KZN</h3>
+            </div>
+        </div>
+         <div class="hos">
+            <img src="https://media.istockphoto.com/photos/building-with-large-h-sign-for-hospital-picture-id855680246?k=20&m=855680246&s=612x612&w=0&h=AsYKIEa_I6zsbVHIORzH-ZlFgcEuJqXA3AsqfG8w3Mo=" />
+             <div class="layer">
+                <h3>Western Cape</h3>
+            </div>
+        </div>
+         <div class="hos">
+            <img src="https://media.istockphoto.com/photos/building-with-large-h-sign-for-hospital-picture-id855680246?k=20&m=855680246&s=612x612&w=0&h=AsYKIEa_I6zsbVHIORzH-ZlFgcEuJqXA3AsqfG8w3Mo=" />
+             <div class="layer">
+                <h3>North West</h3>
+            </div>
+        </div>
+         <div class="hos">
+            <img src="https://thumbs.dreamstime.com/b/hospital-building-typical-modern-large-urban-43153826.jpg" />
+             <div class="layer">
+                <h3>Eastern Cape</h3>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+<section class="facilities">
+    <h1 class="first">Our Facilities</h1>
+    <p>We aim to give back that which a patient might think has lost and we also help in showing our patient the reason to live if hope is lost in them</p>
+   <div class="grids">
+        <div class="row">
+        <div class="facility-col">
+            <img src="https://www.care2curephysiotherapy.com/wp-content/uploads/2019/09/physiotherapy_techniques.jpg" />
+        <h3 style="color: #111">Our Physiotherapy</h3>
+        <p>Help the patient to maintain, or  store healthy through physical examination, diagnisis, prognosis, patient education, physical intervernation, rehabilitation and health</p>
+        </div>
+    </div>
+     <div class="row">
+       <div class="facility-col">
+            <img src="https://s3.amazonaws.com/utep-uploads/wp-content/uploads/counseling-wfu/2019/11/25104211/school-counselor.jpg" />
+        <h3 style="color: #111">Our Councelors</h3>
+        <p>Our counselors are there to assist clients in reaching their optimal level of psychosocial functioning through resolving negative patterns, prevention, rehabilitation, and improving quality of life.</p>
+       </div>
+    </div>
+     <div class="row">
+         <div class="facility-col">
+        <img src="https://www.kvc.org/wp-content/uploads/2015/12/iStock_000022468041_XXXLarge.jpg" />
+            <h3 style="color: #111">Our Social Workers</h3>
+        <p>L.H.M.S have social worker, people who are there to promotes social change, development, cohesion and the empowerment of people and communities</p>
+        </div>
+    </div>
+   </div>
+</section>
+
+
+<section class="cta">
+    <h1 class="first">For more information about our hospital please do contact us, We are 24/7 ready waiting to assist you.</h1>
+    <a asp-controller="" asp-action="" class="btn btn-outline-danger">CONTACT US</a>
+</section>
+
+
+  <!-- The Tour Section -->
+  <div class="w3-black" id="tour">
+    <div class="w3-container w3-content w3-padding-64" style="max-width:800px">
+      <h2 class="w3-wide w3-center">DOCTORS DATES</h2>
+      <p class="w3-opacity w3-center"><i>Remember to book for your doctor!</i></p><br>
+
+      <ul class="w3-ul w3-border w3-white w3-text-grey">
+        <li class="w3-padding">September <span class="w3-tag w3-red w3-margin-left">Doctor K.Smith</span></li>
+        <li class="w3-padding">October <span class="w3-tag w3-red w3-margin-left">Doctor C.Morumudi</span></li>
+        <li class="w3-padding">November <span class="w3-tag w3-red w3-margin-left">Doctor B.Peters</span></li>
+      </ul>
+
+      <div class="w3-row-padding w3-padding-32" style="margin:0 -16px">
+        <div class="w3-third w3-margin-bottom">
+          <img src="https://thumbs.dreamstime.com/b/male-doctor-portrait-isolated-white-background-56744085.jpg" alt="New York" style="width:100%" class="w3-hover-opacity">
+          <div class="w3-container w3-white">
+            <p><b>Doctor K.Smith</b></p>
+            <p class="w3-opacity">Fri 27 Nov 2022</p>
+            <p>Doctor smith will be in our hospital to attend all the dermatology patients.</p>
+            <button class="w3-button w3-black w3-margin-bottom" onclick="document.getElementById('ticketModal').style.display='block'">Book for an appointment</button>
+          </div>
+        </div>
+        <div class="w3-third w3-margin-bottom">
+          <img src="https://familydoctor.org/wp-content/uploads/2018/02/41808433_l.jpg" alt="Paris" style="width:100%" class="w3-hover-opacity">
+          <div class="w3-container w3-white">
+            <p><b>Doctor C.Morumudi</b></p>
+            <p class="w3-opacity">Sat 28 Nov 2022</p>
+            <p>Doctor C.Morumudi will be with us to attend all the audiologist patience.</p>
+            <button class="w3-button w3-black w3-margin-bottom" onclick="document.getElementById('ticketModal').style.display='block'">Book for an appointment</button>
+          </div>
+        </div>
+        <div class="w3-third w3-margin-bottom">
+          <img src="https://img.freepik.com/free-photo/portrait-smiling-handsome-male-doctor-man_171337-5055.jpg?w=2000" alt="San Francisco" style="width:100%" class="w3-hover-opacity">
+          <div class="w3-container w3-white">
+            <p><b>Doctor B.Peters</b></p>
+            <p class="w3-opacity">Sun 29 Nov 2022</p>
+            <p>All the neurologist patience will be checked by Doctor B.Peters.</p>
+            <button class="w3-button w3-black w3-margin-bottom" onclick="document.getElementById('ticketModal').style.display='block'">Book for an appointment</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+ 
+
+  <!-- The Contact Section -->
+  <div class="w3-container w3-content w3-padding-64" style="max-width:800px" id="contact">
+    <h2 class="w3-wide w3-center">CONTACT</h2>
+    <p class="w3-opacity w3-center"><i>Emegency? Drop a call!</i></p>
+    <div class="w3-row w3-padding-32">
+      <div class="w3-col m6 w3-large w3-margin-bottom">
+        <i class="fa fa-map-marker" style="width:30px"></i> Gauteng, SA<br>
+        <i class="fa fa-phone" style="width:30px"></i> Phone: +27 115 989 1290<br>
+        <i class="fa fa-envelope" style="width:30px"> </i> Email: mail@lhms.com<br>
+      </div>
+      <div class="w3-col m6">
+        <form action="/action_page.php" target="_blank">
+          <div class="w3-row-padding" style="margin:0 -16px 8px -16px">
+            <div class="w3-half">
+              <input class="w3-input w3-border" type="text" placeholder="Name" required name="Name">
+            </div>
+            <div class="w3-half">
+              <input class="w3-input w3-border" type="text" placeholder="Email" required name="Email">
+            </div>
+          </div>
+          <input class="w3-input w3-border" type="text" placeholder="Message" required name="Message">
+          <button class="w3-button w3-black w3-section w3-right" type="submit">SEND</button>
+        </form>
+      </div>
+    </div>
+  </div>
+  
+<!-- End Page Content -->
+</div>
+
+<!-- Image of location/map -->
+<img src="/w3images/map.jpg" class="w3-image w3-greyscale-min" style="width:100%">
+
+<!-- Footer -->
+<footer class="w3-container w3-padding-64 w3-center w3-opacity w3-light-grey w3-xlarge">
+  <i class="fa fa-facebook-official w3-hover-opacity"></i>
+  <i class="fa fa-instagram w3-hover-opacity"></i>
+  <i class="fa fa-snapchat w3-hover-opacity"></i>
+  <i class="fa fa-pinterest-p w3-hover-opacity"></i>
+  <i class="fa fa-twitter w3-hover-opacity"></i>
+  <i class="fa fa-linkedin w3-hover-opacity"></i>
+  <p class="w3-medium">Powered by <a href="#" target="_blank">clearance Morumudi</a></p>
+</footer>
+
+<script>
+// Automatic Slideshow - change image every 4 seconds
+var myIndex = 0;
+carousel();
+
+function carousel() {
+  var i;
+  var x = document.getElementsByClassName("mySlides");
+  for (i = 0; i < x.length; i++) {
+    x[i].style.display = "none";  
+  }
+  myIndex++;
+  if (myIndex > x.length) {myIndex = 1}    
+  x[myIndex-1].style.display = "block";  
+  setTimeout(carousel, 4000);    
+}
+
+// Used to toggle the menu on small screens when clicking on the menu button
+function myFunction() {
+  var x = document.getElementById("navDemo");
+  if (x.className.indexOf("w3-show") == -1) {
+    x.className += " w3-show";
+  } else { 
+    x.className = x.className.replace(" w3-show", "");
+  }
+}
+
+// When the user clicks anywhere outside of the modal, close it
+var modal = document.getElementById('ticketModal');
+window.onclick = function(event) {
+  if (event.target == modal) {
+    modal.style.display = "none";
+  }
+}
+</script>
+
+</body>
+</html>
