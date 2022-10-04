@@ -14,3 +14,7 @@ public class DevOpsProjectApplication {
 	}
 
 }
+
+
+//<groupId>org.springframework.boot</groupId>
+//<artifactId>spring-boot-maven-plugin</artifactId>
